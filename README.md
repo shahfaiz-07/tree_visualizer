@@ -107,4 +107,4 @@ Contributions are welcome! If you have any ideas or suggestions, please open an 
 
 - **My Name:** [LinkedIn Profile](https://www.linkedin.com/in/s-faizaan-hussain-70b840248)
 - **Project Link:** [GitHub Repository](https://github.com/shahfaiz-07/tree_visualizer)
-- **Deployed Link:** 
+- **Deployed Link:** https://tree-visualizer-omega.vercel.app/
