@@ -6,10 +6,10 @@ function App() {
 
   return (
     <>
-        <h1 className="text-blue-700 font-bold text-3xl py-3 px-5 border-2 rounded-full border-blue-700 mx-auto text-center w-fit my-5">
+        <h1 className="text-blue-700 font-extrabold text-3xl py-3 px-5 border-2 rounded-full border-blue-700 mx-auto text-center w-fit my-5 font-mono">
           🌲 Tree Visualiser
         </h1>
-        <div className="flex w-11/12 mx-auto mb-10">
+        <div className="flex flex-col md:flex-row w-11/12 mx-auto mb-10">
           <NodesInput />
           <Flow />
         </div>

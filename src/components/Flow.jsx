@@ -285,43 +285,43 @@ function Flow() {
     );
   };
   return (
-    <div className="w-11/12 mx-auto h-[90vh]">
-      <ReactFlow
-        nodes={nodes}
-        edges={edges}
-        nodeTypes={nodeTypes}
-        colorMode="dark"
-        fitView
-      >
-        <Background />
-        <Controls />
-        <Panel position="bottom-center">
-          <PanelControl
-            jobs={[
-              { handler: preOrderTraversal, text: "Pre Order", passArg: true },
-              {
-                handler: postOrderTraversal,
-                text: "Post Order",
-                passArg: true,
-              },
-              { handler: inOrderTraversal, text: "In Order", passArg: true },
-              {
-                handler: levelOrderTraversal,
-                text: "Level Order",
-                passArg: true,
-              },
-              { handler: resetNodes, text: "Reset", passArg: false },
-            ]}
-            root={treeRep}
-          />
-        </Panel>
-        <Panel position="top-left">
-          <ShowTraversal traversalOrder={traversalOrder} />
-        </Panel>
-        <Panel position="bottom-right">
-          <ShowNode value={highlightedNode} />
-        </Panel>
-      </ReactFlow>
+    <div className="w-11/12 mx-auto h-96 md:h-[90vh] flex flex-col">
+      <div className="flex-grow">
+        <ReactFlow
+          nodes={nodes}
+          edges={edges}
+          nodeTypes={nodeTypes}
+          colorMode="dark"
+          fitView
+        >
+          <Background />
+          <Controls />
+          <Panel position="top-left">
+            <ShowTraversal traversalOrder={traversalOrder} />
+          </Panel>
+          <Panel position="bottom-right">
+            <ShowNode value={highlightedNode} />
+          </Panel>
+        </ReactFlow>
+      </div>
+      <PanelControl
+        jobs={[
+          { handler: preOrderTraversal, text: "Pre Order", passArg: true },
+          {
+            handler: postOrderTraversal,
+            text: "Post Order",
+            passArg: true,
+          },
+          { handler: inOrderTraversal, text: "In Order", passArg: true },
+          {
+            handler: levelOrderTraversal,
+            text: "Level Order",
+            passArg: true,
+          },
+          { handler: resetNodes, text: "Reset", passArg: false },
+        ]}
+        root={treeRep}
+      />
     </div>
   );
 }
